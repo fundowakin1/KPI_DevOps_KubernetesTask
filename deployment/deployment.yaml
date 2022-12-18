@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-node
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-node
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nginx-node
+    spec:
+      containers:
+      - image: fundowakin/devopsdockerlab:latest
+        name: nginx-node
+        ports:
+        - containerPort: 80
+          name: nginx-node
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3
