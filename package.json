@@ -1,0 +1,20 @@
+{
+  "name": "dockertask",
+  "version": "1.0.0",
+  "description": "Simple node js app for KPI DevOps course task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fundowakin1/KPI_DevOps_DockerTask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fundowakin1/KPI_DevOps_DockerTask/issues"
+  },
+  "homepage": "https://github.com/fundowakin1/KPI_DevOps_DockerTask#readme"
+}
